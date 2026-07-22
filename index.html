@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday 🤍</title>
+
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(#ffd6e0,#fff);
+font-family:Arial;
+overflow:hidden;
+}
+
+.box{
+background:white;
+padding:35px;
+border-radius:25px;
+text-align:center;
+width:85%;
+max-width:400px;
+box-shadow:0 10px 30px #aaa;
+animation:zoom 1s;
+}
+
+@keyframes zoom{
+from{transform:scale(0)}
+to{transform:scale(1)}
+}
+
+h1{
+color:#ff5c8a;
+}
+
+button{
+background:#ff5c8a;
+color:white;
+border:0;
+padding:15px 30px;
+border-radius:30px;
+font-size:16px;
+}
+
+#letter{
+display:none;
+animation:show 2s;
+}
+
+@keyframes show{
+from{opacity:0;transform:translateY(50px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+.heart{
+position:absolute;
+animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+0%{top:-20px;opacity:1}
+100%{top:100vh;opacity:0}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>🤍 Happy Birthday 🤍</h1>
+
+<p>
+I have something special for you ✨
+</p>
+
+<button onclick="openLetter()">
+Open My Love 💌
+</button>
+
+<div id="letter">
+
+<h2>🤍 Happy Birthday Sayang 🤍</h2>
+
+<p>
+Terima kasih sebab sentiasa ada.
+Semoga awak sentiasa bahagia,
+semoga birthday sayang next year kita masih
+  bersama, saya nk kasi lebih lgi dari ni.saya takkan
+  pernah bosan kata yang saya sayang awak 
+  tade sape bole ganti awak dalam hidup saya
+  love u so much🤍
+
+Semoga semua impian awak tercapai.
+I hope you always smile 🤍
+</p>
+
+<p>
+from ur fav boy(syafi)
+</p>
+
+</div>
+
+</div>
+
+
+<script>
+
+function openLetter(){
+document.getElementById("letter").style.display="block";
+}
+
+setInterval(function(){
+
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="🤍";
+h.style.left=Math.random()*100+"%";
+h.style.fontSize=Math.random()*20+15+"px";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},5000);
+
+},300);
+
+</script>
+
+</body>
+</html>
